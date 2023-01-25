@@ -1,4 +1,3 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
 
 #pragma once
 
@@ -8,7 +7,8 @@
 #include "Interview_1/Interfaces/PointOfInterest.h"
 #include "Interview_1GameMode.generated.h"
 
-// class UEnvironmentLightManagerComponent;
+class UEnvironmentManagerComponent;
+class UCaptureManagerComponent;
 
 // capture output format
 UENUM(BlueprintType)
@@ -45,13 +45,13 @@ class AInterview_1GameMode : public AGameModeBase
 	GENERATED_BODY()
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-	class UEnvironmentManagerComponent* EnvironmentManager;
+	TObjectPtr<UEnvironmentManagerComponent> EnvironmentManager;
 	
 	UFUNCTION(BlueprintCallable)
 	UEnvironmentManagerComponent* GetEnvironmentManager() const { return EnvironmentManager; }
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
-	class UCaptureManagerComponent* CaptureManager;
+	TObjectPtr<UCaptureManagerComponent> CaptureManager;
 
 	UFUNCTION(BlueprintCallable)
 	UCaptureManagerComponent* GetCaptureManager() const { return CaptureManager; }
@@ -101,7 +101,6 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	float RandomSampleRange;
-	
 
 	// Everything that extends the point of interest Interface
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "POI")

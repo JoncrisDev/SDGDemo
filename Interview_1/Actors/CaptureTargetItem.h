@@ -29,7 +29,6 @@ class INTERVIEW_1_API ACaptureTargetItem : public AActor, public IPointOfInteres
 	class USpringArmComponent* SpringArm;
 
 	// Interface Implementation
-	// @todo: oh dear, oh dear this interface is not properly utilised.
 	virtual void CapturePanorama() const override;
 	
 	// Should we panorama capture this target.

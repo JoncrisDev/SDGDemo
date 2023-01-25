@@ -8,7 +8,8 @@ public class Interview_1 : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "EnhancedInput",
-		 "RemoteControl", "RemoteControlWebInterface", "RemoteControlCommon" });
+		PublicDependencyModuleNames.AddRange(new string[]
+			{ "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "EnhancedInput",
+				"RemoteControl", "RemoteControlWebInterface", "RemoteControlCommon" });
 	}
 }
